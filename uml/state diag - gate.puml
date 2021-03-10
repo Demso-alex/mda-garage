@@ -1,0 +1,14 @@
+@startuml
+closed : La porte est fermé
+open : La porte est ouvert
+opening : La porte est en train de s'ouvrir
+closing : La porte est en train de se fermer
+
+[*] --> closed
+open --> closing : Fermeture autorisée
+closed --> opening : Ouverture autorisée
+closing --> opening : Ouverture autorisée
+opening --> open : Ouverture
+closing --> closed : Fermeture
+
+@enduml 
